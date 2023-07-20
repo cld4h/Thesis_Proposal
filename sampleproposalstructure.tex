@@ -142,18 +142,23 @@ This may effectively require that you to avoid writing sentences where the citat
 \end{figure}
 \end{center}
 
-I can reference a particular image, such as Figure \ref{fig:sampleimage1}, using the \verb|\ref| macro. The \texttt{fig:} part is part of the key, and optional. It's often useful to use `textt{fig:}` for figures, `textt{tab:}` for Tables, `textt{eqn:}` or `textt{eq:}` for equations, etc.. as each type has its own numbering. If you have a multi-panel figure, you can make separate images and use a package that handles multiple figures. Typically, the subfigures are enumerated alphabetically and either share a caption, which individually refers to them, or each subfigure has its own caption with an overarching caption for everything. Each figure (and subfigure) can have its own \texttt{label} so you can refer to them specifically.
+I can reference a particular image, such as Figure \ref{fig:sampleimage1}, using the \verb|\ref| macro. The \texttt{fig:} part is part of the key, and optional. It's often useful to use `\texttt{fig:}' for figures, `\texttt{tab:}' for Tables, `\texttt{eqn:}' or `\texttt{eq:}' for equations, etc.. as each type has its own numbering. If you have a multi-panel figure, you can make separate images and use a package that handles multiple figures. Typically, the subfigures are enumerated alphabetically and either share a caption, which individually refers to them, or each subfigure has its own caption with an overarching caption for everything. Each figure (and subfigure) can have its own \texttt{label} so you can refer to them specifically.
 
 
 \subsection {Tables}
 	 
 \begin{table}
-	\begin{tab}
-		\includegraphics[width=0.9\textwidth]{Rplot}
-		\caption{\label{fig:sampleimage1} This is a sample image put into a Figure. Captions should go under figures. Usually Figures are for images/visuals.}
-	\end{tab}
+	\centering
+		\caption{\label{tab:sampletable1} This is an example a table. The \{table\} environment makes it float like a figure, but the table itself is created in the tabular environment.  }
+	\begin{tabular}{|c| c|}
+		\hline
+		header 1 & header 2 \\
+		\hline
+		$x_1$ & $y1$\\
+		\hline
+	\end{tabular}
 \end{table}
-
+Tables can also be included in your latex, like Table \ref{tab:sampletable1}. The text may not always match where the table is, but if it's labelled, it's easy to find. Floating objects are usually at the top or bottom of the current, previous, or next page. Where it ends up depends on typsetting rules on where it looks best, that you don't have to worry about: they have been programmed into the computer.
 
 	\section{Methodology}
 	This section should \emph{not introduce} anything new (that should have been done in the previous section). Instead, you can reference material from that section or recite the citation. 
